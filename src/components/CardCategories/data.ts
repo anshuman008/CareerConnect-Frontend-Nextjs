@@ -6,26 +6,26 @@ import { CardCategory3Props } from "./CardCategory3";
 
 export const CATS_DISCOVER: CardCategory3Props[] = [
   {
-    name: "Explore new arrivals",
-    desc: "Shop the latest <br /> from top brands",
+    name: "Jossa counselling",
+    desc: "JoSAA Counselling Procedure 2023 | Best Choice filling Order",
     featuredImage: img1,
     color: "bg-yellow-50",
   },
   {
-    name: "Digital gift cards",
-    desc: "Give the gift <br /> of choice",
+    name: "Comedk Counselling",
+    desc: "Comedk Counselling Procedure 2023 | Best Choice filling Order",
     featuredImage: img2,
     color: "bg-red-50",
   },
   {
-    name: "Sale collection",
-    desc: "Up to <br /> 80% off retail",
+    name: "JAC DELHI",
+    desc: "JAC DELHI Counselling Procedure 2023 | Best Choice filling Order",
     featuredImage: img3,
     color: "bg-blue-50",
   },
   {
-    name: "Sale collection",
-    desc: "Up to <br /> 80% off retail",
+    name: "HBTU Counselling",
+    desc: "HBTU Counselling Procedure 2023 | Best Choice filling Order",
     featuredImage: img4,
     color: "bg-green-50",
   },

@@ -70,7 +70,7 @@ const DiscoverMoreSlider = () => {
         <ul className="glide__slides">
           {CATS_DISCOVER.map((item, index) => (
             <li key={index} className={`glide__slide`}>
-              <CardCategory3
+              <CardCategory3  // conatining side image
                 name={item.name}
                 desc={item.desc}
                 featuredImage={item.featuredImage}
