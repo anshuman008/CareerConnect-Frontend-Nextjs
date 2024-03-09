@@ -181,6 +181,11 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
 const ABOUT_PAGE_CHILD: NavItemType[] = [
   {
     id: ncNanoId(),
+    href: "/about",
+    name: "About Us",
+  },
+  {
+    id: ncNanoId(),
     href: "/contactus",
     name: "Contact Us",
   },
