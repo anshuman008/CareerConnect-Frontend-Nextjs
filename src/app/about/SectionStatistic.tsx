@@ -21,7 +21,7 @@ const CAREERCONNECT_STATS: Statistic[] = [
   {
     id: "3",
     heading: "50,000+ Students Guided",
-    subHeading: "Successfully guided over 20,000 students to top engineering colleges in India",
+    subHeading: "Successfully guided over 50,000 students to top engineering colleges in India",
   },
 ];
 
