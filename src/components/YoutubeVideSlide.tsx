@@ -1,24 +1,23 @@
 import React from 'react';
 
 const YoutubeVideoSlide = () => {
+  const sliderStyle: React.CSSProperties = {
+    display: 'flex',
+    overflowX: 'auto', // No error should be here now
+    width: '100%',
+    gap: '20px',
+    padding: '20px',
+    scrollSnapType: 'x mandatory',
+  };
 
-    const sliderStyle = {
-      display: 'flex',
-      overflowX: 'auto',
-      width: '100%',
-      gap: '20px',
-      padding: '20px',
-      scrollSnapType: 'x mandatory', // Enable snap scrolling
-    };
-  
-    const iframeStyle = {
-      flex: '0 0 auto',
-      width: '30vw', // Adjust the width as per your preference
-      height: '20vw', // Adjust height to maintain a 16:9 aspect ratio
-      borderRadius: '10px', // Rounded corners for a modern look
-      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.15)', // Subtle shadow for depth
-      scrollSnapAlign: 'start', // Ensure the snap aligns correctly
-    };
+  const iframeStyle: React.CSSProperties = {
+    flex: '0 0 auto',
+    width: '30vw',
+    height: '20vw',
+    borderRadius: '10px',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.15)',
+    scrollSnapAlign: 'start',
+  };
 
   return (
     <div style={sliderStyle}>

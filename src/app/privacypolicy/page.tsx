@@ -83,7 +83,7 @@ const Privacy = () => {
 
       <h2 style={style.heading}>How We Use Cookies</h2>
       <p style={style.paragraph}>
-        We use "cookies" to collect information and understand customer behavior. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. If you do not accept cookies, you may not be able to fully avail of our goods or services. We do not control third-party cookies, and their privacy policies govern their use.
+        We use cookies to collect information and understand customer behavior. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. If you do not accept cookies, you may not be able to fully avail of our goods or services. We do not control third-party cookies, and their privacy policies govern their use.
       </p>
 
       <h2 style={style.heading}>Your Rights Relating To Your Data</h2>

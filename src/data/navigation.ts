@@ -48,7 +48,7 @@ export const MEGAMENU_TEMPLATES: NavItemType[] = [
       { id: ncNanoId(), href: "/blog", name: "Blog Page" },
       { id: ncNanoId(), href: "/blog-single", name: "Blog Single" },
       { id: ncNanoId(), href: "/about", name: "About Page" },
-      { id: ncNanoId(), href: "/contact", name: "Contact Page" },
+      { id: ncNanoId(), href: "/contactus", name: "Contact Page" },
       { id: ncNanoId(), href: "/login", name: "Login" },
       { id: ncNanoId(), href: "/signup", name: "Signup" },
       { id: ncNanoId(), href: "/forgot-pass", name: "Forgot Password" },
@@ -136,7 +136,7 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
       },
       {
         id: ncNanoId(),
-        href: "/contact",
+        href: "/contactus",
         name: "Contact us",
       },
       {
