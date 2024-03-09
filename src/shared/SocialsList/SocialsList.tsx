@@ -13,8 +13,8 @@ export interface SocialsListProps {
 const socialsDemo = [
   { name: "Facebook", icon: facebook, href: "#" },
   { name: "Twitter", icon: twitter, href: "#" },
-  { name: "Youtube", icon: youtube, href: "#" },
-  { name: "Telegram", icon: telegram, href: "#" },
+  { name: "Youtube", icon: youtube, href: "https://www.youtube.com/@careerconnectservices" },
+  { name: "Telegram", icon: telegram, href: "https://t.me/joinchat/AAAAAEd_g24foFA_rvzlTw" },
 ];
 
 const SocialsList: FC<SocialsListProps> = ({

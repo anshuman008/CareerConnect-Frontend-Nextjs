@@ -9,6 +9,8 @@ import useInterval from "react-use/lib/useInterval";
 import useBoolean from "react-use/lib/useBoolean";
 import Image from "next/image";
 import { HERO2_DEMO_DATA as DATA } from "./data";
+import youtube from "@/images/socials/youtube.svg";
+import Link from "next/link";
 
 export interface SectionHero2Props {
   className?: string;
@@ -149,8 +151,15 @@ const SectionHero2: FC<SectionHero2Props> = ({ className = "" }) => {
               className="nc-SectionHero2Item__button dark:bg-slate-900"
               sizeClass="py-3 px-6 sm:py-5 sm:px-9"
               href={item.btnLink}
+              targetBlank={false}
             >
-              <span>{item.btnText}</span>
+  
+             
+              <div style={{display:"flex",alignItems:"center",justifyContent:"center"}}>
+              <Image style={{width:30,height:30,margin:5}} src={youtube} alt="" /> {item.btnText}
+              </div>
+              {/* <span></span>  */}
+
               <span>
                 <svg className="w-5 h-5 ms-2.5" viewBox="0 0 24 24" fill="none">
                   <path

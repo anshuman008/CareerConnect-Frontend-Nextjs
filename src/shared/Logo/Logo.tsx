@@ -3,6 +3,7 @@ import logoImg from "@/images/logo.svg";
 import logoLightImg from "@/images/logo-light.svg";
 import Link from "next/link";
 import Image from "next/image";
+import logoImage from "@/images/newBrandLogo.png"
 
 export interface LogoProps {
   img?: string;
@@ -24,12 +25,10 @@ const Logo: React.FC<LogoProps> = ({
       {/* PLEASE UN COMMENT BELLOW CODE AND USE IT */}
       {img ? (
         <Image
-          className={`block h-8 sm:h-10 w-auto ${
-            imgLight ? "dark:hidden" : ""
-          }`}
-          src={img}
+         style={{height:90,width:90,margin:50}}
+          src={logoImage}
           alt="Logo"
-          sizes="200px"
+          sizes="400px"
           priority
         />
       ) : (

@@ -177,40 +177,63 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
   },
 ];
 
+
+const ABOUT_PAGE_CHILD: NavItemType[] = [
+  {
+    id: ncNanoId(),
+    href: "/contactus",
+    name: "Contact Us",
+  },
+  {
+    id: ncNanoId(),
+    href: "/privacypolicy",
+    name: "Privacy Policy",
+  },
+  {
+    id: ncNanoId(),
+    href: "/refundpolicy",
+    name: "Refund Policy",
+  },
+  {
+    id: ncNanoId(),
+    href: "/tnc",
+    name: "Terms and Condition",
+  },
+];
+
+
+
 export const NAVIGATION_DEMO_2: NavItemType[] = [
   {
     id: ncNanoId(),
-    href: "/collection",
-    name: "Men",
+    href: "/",
+    name: "Home",
   },
   {
     id: ncNanoId(),
     href: "/collection-2",
-    name: "Women",
-  },
-  {
-    id: ncNanoId(),
-    href: "/collection",
-    name: "Beauty",
+    name: "Products",
   },
 
   {
     id: ncNanoId(),
     href: "/collection-2",
-    name: "Sport",
-  },
-  {
-    id: ncNanoId(),
-    href: "/collection",
-    name: "Templates",
-    type: "megaMenu",
-    children: MEGAMENU_TEMPLATES,
-  },
-  {
-    id: ncNanoId(),
-    href: "/search",
-    name: "Explore",
+    name: "About Us",
     type: "dropdown",
-    children: OTHER_PAGE_CHILD,
+    children: ABOUT_PAGE_CHILD,
   },
+  // {
+  //   id: ncNanoId(),
+  //   href: "/collection",
+  //   name: "Templates",
+  //   type: "megaMenu",
+  //   children: MEGAMENU_TEMPLATES,
+  // },
+  // {
+  //   id: ncNanoId(),
+  //   href: "/search",
+  //   name: "Explore",
+  //   type: "dropdown",
+  //   children: OTHER_PAGE_CHILD,
+  // },
 ];

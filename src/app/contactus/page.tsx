@@ -6,23 +6,26 @@ import Textarea from "@/shared/Textarea/Textarea";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import BackgroundSection from "@/components/BackgroundSection/BackgroundSection";
 import SectionPromo1 from "@/components/SectionPromo1";
+import { Alert } from "@/shared/Alert/Alert";
 
 const info = [
   {
     title: "🗺 ADDRESS",
-    desc: "Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter",
+    desc: "Delhi NCR",
   },
   {
     title: "💌 EMAIL",
-    desc: "nc.example@example.com",
+    desc: "help.careerconnectservices@gmail.com",
   },
   {
-    title: "☎ PHONE",
-    desc: "000-123-456-7890",
+    title: "☎ whatsaap",
+    desc: "9899335725",
   },
 ];
 
 const PageContact = ({}) => {
+
+   
   return (
     <div className={`nc-PageContact overflow-hidden`}>
       <div className="">
@@ -50,7 +53,7 @@ const PageContact = ({}) => {
               </div>
             </div>
             <div>
-              <form className="grid grid-cols-1 gap-6" action="#" method="post">
+              <form className="grid grid-cols-1 gap-6" >
                 <label className="block">
                   <Label>Full name</Label>
 
@@ -84,12 +87,7 @@ const PageContact = ({}) => {
       </div>
 
       {/* OTHER SECTIONS */}
-      <div className="container">
-        <div className="relative my-24 lg:my-32 py-24 lg:py-32">
-          <BackgroundSection />
-          <SectionPromo1 />
-        </div>
-      </div>
+
     </div>
   );
 };
