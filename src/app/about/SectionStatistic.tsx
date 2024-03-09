@@ -7,23 +7,21 @@ export interface Statistic {
   subHeading: string;
 }
 
-const FOUNDER_DEMO: Statistic[] = [
+const CAREERCONNECT_STATS: Statistic[] = [
   {
     id: "1",
-    heading: "10 million",
-    subHeading:
-      "Articles have been public around the world (as of Sept. 30, 2021)",
+    heading: "Best Choice Filling Algorithm",
+    subHeading: "Innovative algorithm ensuring optimal college and branch selection",
   },
   {
     id: "2",
-    heading: "100,000",
-    subHeading: "Registered users account (as of Sept. 30, 2021)",
+    heading: "Complete Support till Admission",
+    subHeading: "Personalized assistance via chat and phone calls throughout the admission process",
   },
   {
     id: "3",
-    heading: "220+",
-    subHeading:
-      "Countries and regions have our presence (as of Sept. 30, 2021)",
+    heading: "50,000+ Students Guided",
+    subHeading: "Successfully guided over 20,000 students to top engineering colleges in India",
   },
 ];
 
@@ -35,13 +33,12 @@ const SectionStatistic: FC<SectionStatisticProps> = ({ className = "" }) => {
   return (
     <div className={`nc-SectionStatistic relative ${className}`}>
       <Heading
-        desc=" We’re impartial and independent, and every day we create distinctive,
-          world-class programmes and content"
+        desc="Discover why CareerConnect Services is the most trusted platform for career counseling and guidance."
       >
-        🚀 Fast Facts
+        CareerConnect Highlights
       </Heading>
       <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-3 xl:gap-8">
-        {FOUNDER_DEMO.map((item) => (
+        {CAREERCONNECT_STATS.map((item) => (
           <div
             key={item.id}
             className="p-6 bg-neutral-50 dark:bg-neutral-800 rounded-2xl dark:border-neutral-800"

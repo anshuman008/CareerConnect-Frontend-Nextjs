@@ -12,21 +12,22 @@ const PageAbout = ({}) => {
   return (
     <div className={`nc-PageAbout overflow-hidden relative`}>
       {/* ======== BG GLASS ======== */}
-      <BgGlassmorphism />
+      {/* <BgGlassmorphism /> */}
 
       <div className="container py-16 lg:py-28 space-y-16 lg:space-y-28">
-        <SectionHero
-          rightImg={rightImg}
-          heading="👋 About Us."
-          btnText=""
-          subHeading="We’re impartial and independent, and every day we create distinctive, world-class programmes and content which inform, educate and entertain millions of people in the around the world."
-        />
+  <SectionHero
+    rightImg={""}
+    heading="👋 About Us."
+    btnText=""
+    subHeading="With over 10+ years of experience, CareerConnect Services is dedicated to providing transparent and unbiased guidance. We help shape bright futures with comprehensive career counseling services."
+  /> 
 
-        <SectionFounder />
-        <div className="relative py-16">
+        {/* <SectionFounder /> */}
+
+        {/* <div className="relative py-16">
           <BackgroundSection />
           <SectionClientSay />
-        </div>
+        </div> */}
 
         <SectionStatistic />
 

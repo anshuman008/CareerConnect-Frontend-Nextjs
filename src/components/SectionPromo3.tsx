@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import NcImage from "@/shared/NcImage/NcImage";
-import rightImgDemo from "@/images/promo3.png";
+import rightImgDemo from "@/images/founder.png"; // Update this with a relevant image
 import backgroundLineSvg from "@/images/BackgroundLine.svg";
 import Badge from "@/shared/Badge/Badge";
 import Input from "@/shared/Input/Input";
@@ -21,35 +21,34 @@ const SectionPromo3: FC<SectionPromo3Props> = ({ className = "lg:pt-10" }) => {
             fill
             className="absolute w-full h-full object-contain object-bottom dark:opacity-5"
             src={backgroundLineSvg}
-            alt="backgroundLineSvg"
+            alt="background lines"
           />
         </div>
 
         <div className="lg:w-[50%] max-w-lg relative">
           <h2 className="font-semibold text-4xl md:text-5xl">
-            {`Don't miss out on special offers`}
+            Your Future Begins Here
           </h2>
           <span className="block mt-5 text-neutral-500 dark:text-neutral-400">
-            Register to receive news about the latest, savings combos, discount
-            codes...
+            With over 10+ years of experience, CareerConnect Services is dedicated to providing transparent and unbiased guidance, helping to shape bright futures with comprehensive career counseling services.
           </span>
           <ul className="space-y-4 mt-10">
             <li className="flex items-center space-x-4">
               <Badge color="purple" name="01" />
               <span className="font-medium text-neutral-700 dark:text-neutral-300">
-                Savings combos
+                Best Choice Filling Algorithm
               </span>
             </li>
             <li className="flex items-center space-x-4">
               <Badge name="02" />
               <span className="font-medium text-neutral-700 dark:text-neutral-300">
-                Freeship
+                Complete Support till Admission
               </span>
             </li>
             <li className="flex items-center space-x-4">
               <Badge color="red" name="03" />
               <span className="font-medium text-neutral-700 dark:text-neutral-300">
-                Premium magazines
+                GUARANTEED College/Branch Allotment
               </span>
             </li>
           </ul>
@@ -71,11 +70,11 @@ const SectionPromo3: FC<SectionPromo3Props> = ({ className = "lg:pt-10" }) => {
         </div>
 
         <NcImage
-          alt=""
           containerClassName="relative block lg:absolute lg:right-0 lg:bottom-0 mt-10 lg:mt-0 max-w-lg lg:max-w-[calc(50%-40px)]"
           src={rightImgDemo}
           sizes="(max-width: 768px) 100vw, 50vw"
           className=""
+          alt="CareerConnect Services"
         />
       </div>
     </div>

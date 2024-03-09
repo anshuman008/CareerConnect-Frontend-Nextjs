@@ -10,7 +10,6 @@ import useBoolean from "react-use/lib/useBoolean";
 import Image from "next/image";
 import { HERO2_DEMO_DATA as DATA } from "./data";
 import youtube from "@/images/socials/youtube.svg";
-import Link from "next/link";
 
 export interface SectionHero2Props {
   className?: string;

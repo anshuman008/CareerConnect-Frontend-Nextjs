@@ -8,6 +8,7 @@ import Navigation from "@/shared/Navigation/Navigation";
 import CartDropdown from "./CartDropdown";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
+import CommingSoonComp from "../CommingSoonComp";
 
 export interface MainNav2LoggedProps {}
 
@@ -17,6 +18,8 @@ const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
   const router = useRouter();
 
   const renderMagnifyingGlassIcon = () => {
+
+    
     return (
       <svg
         width={22}
@@ -72,6 +75,7 @@ const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
   };
 
   const renderContent = () => {
+
     return (
       <div className="h-20 flex justify-between">
         <div className="flex items-center lg:hidden flex-1">
@@ -86,7 +90,10 @@ const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
           {showSearchForm ? renderSearchForm() : <Navigation />}
         </div>
 
-        <div className="flex-1 flex items-center justify-end text-slate-700 dark:text-slate-100">
+
+
+           <CommingSoonComp/>
+        {/* <div className="flex-1 flex items-center justify-end text-slate-700 dark:text-slate-100">
           {!showSearchForm && (
             <button
               className="hidden lg:flex w-10 h-10 sm:w-12 sm:h-12 rounded-full text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none items-center justify-center"
@@ -97,7 +104,7 @@ const MainNav2Logged: FC<MainNav2LoggedProps> = () => {
           )}
           <AvatarDropdown />
           <CartDropdown />
-        </div>
+        </div> */}
 
       </div>
     );

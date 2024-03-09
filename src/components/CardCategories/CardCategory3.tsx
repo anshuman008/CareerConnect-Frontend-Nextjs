@@ -19,7 +19,11 @@ const CardCategory3: FC<CardCategory3Props> = ({
   desc = CATS_DISCOVER[2].desc,
   color = CATS_DISCOVER[2].color,
 }) => {
+
+  
+
   return (
+
     <Link
       href={"/collection"}
       className={`nc-CardCategory3 block ${className}`}
@@ -29,11 +33,11 @@ const CardCategory3: FC<CardCategory3Props> = ({
       >
         <div>
           <div className="absolute inset-5 sm:inset-8">
-            {/* <Image
+            <Image
               alt=""
               src={featuredImage || ""}
               className="absolute end-0 w-1/2 max-w-[260px] h-full object-contain drop-shadow-xl"
-            /> */}
+            />
           </div>
         </div>
         <span className="opacity-0 group-hover:opacity-40 absolute inset-0 bg-black/10 transition-opacity"></span>
@@ -52,13 +56,16 @@ const CardCategory3: FC<CardCategory3Props> = ({
               )}
             </div>
             <div className="mt-auto">
-              <ButtonSecondary
+              {/* <ButtonSecondary
                 sizeClass="py-3 px-4 sm:py-3.5 sm:px-6"
                 fontSize="text-sm font-medium"
                 className="nc-shadow-lg"
-              >
-                Show me all
-              </ButtonSecondary>
+              > */}
+{/*                
+              </ButtonSecondary> */}
+              <Link href={"/engg"} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+              Show me all
+              </Link>
             </div>
           </div>
         </div>

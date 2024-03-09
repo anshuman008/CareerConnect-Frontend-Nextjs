@@ -1,19 +1,24 @@
 import React from 'react';
 
 const YoutubeVideoSlide = () => {
-  const sliderStyle = {
-    display: 'flex',
-    overflowX: 'auto',
-    width: '100%',
-    gap: '20px', // Adjust the space between iframes
-    padding: '20px' // Adds padding around the iframes
-  };
 
-  const iframeStyle = {
-    flex: '0 0 auto', // This ensures that each iframe is fully visible and not shrunk
-    width: '100wh', // Each iframe takes up 100% of the viewport width
-    height: '20vw' // This maintains a 16:9 aspect ratio (height is 56.25% of width)
-  };
+    const sliderStyle = {
+      display: 'flex',
+      overflowX: 'auto',
+      width: '100%',
+      gap: '20px',
+      padding: '20px',
+      scrollSnapType: 'x mandatory', // Enable snap scrolling
+    };
+  
+    const iframeStyle = {
+      flex: '0 0 auto',
+      width: '30vw', // Adjust the width as per your preference
+      height: '20vw', // Adjust height to maintain a 16:9 aspect ratio
+      borderRadius: '10px', // Rounded corners for a modern look
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.15)', // Subtle shadow for depth
+      scrollSnapAlign: 'start', // Ensure the snap aligns correctly
+    };
 
   return (
     <div style={sliderStyle}>
