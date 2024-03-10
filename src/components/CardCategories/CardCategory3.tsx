@@ -25,7 +25,7 @@ const CardCategory3: FC<CardCategory3Props> = ({
   return (
 
     <Link
-      href={"/collection"}
+      href={"/engg"}
       className={`nc-CardCategory3 block ${className}`}
     >
       <div
