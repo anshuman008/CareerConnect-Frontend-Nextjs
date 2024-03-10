@@ -1,55 +1,51 @@
-import Image from 'next/image'
-import React from 'react'
-import  Android from "@/images/pngegg.png"
+'use client'
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import Android from "@/images/pngegg.png";
 
 const CommingSoonComp = () => {
+  const [isMobile, setIsMobile] = useState(false);
 
-    const fadeInAnimation = `
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  `;
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
 
-  const pulseAnimation = `
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
-    }
-  `;
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-<div style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: "8px",
-        padding: "10px 20px",
-        animation: "fadeIn 1s ease-out"
-      }}>
-        <style>
-          {fadeInAnimation}
-          {pulseAnimation}
-        </style>
+    <>
+      <style>
+        {`
+          @keyframes growAndShrink {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+          }
 
-        <h4 style={{
-          marginRight: "10px",
-          fontSize: "1.2rem",
-          fontWeight: "bold",
-          color: "#333",
-          animation: "fadeIn 2s ease-out"
-        }}>Coming Soon</h4>
-        <div style={{
-          animation: "pulse 2s infinite"
-        }}>
-          <Image style={{
-            width: "150px",
-            height: "150px"
-          }} src={Android} alt="android" />
-        </div>
+          .animate-growAndShrink {
+            animation: growAndShrink 2s infinite;
+          }
+        `}
+      </style>
+      <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} items-center justify-center rounded-lg p-4 animate-fadeIn`}>
+        {isMobile ? (
+          <div className="animate-growAndShrink relative w-20 h-20">
+            <Image src={Android} alt="android" layout="fill" objectFit="contain" />
+          </div>
+        ) : (
+          <>
+            <h4 className="mb-2 sm:mb-0 sm:mr-4 text-base sm:text-lg font-bold text-gray-800 animate-fadeInFast">Coming Soon</h4>
+            <div className="animate-growAndShrink relative w-24 h-24 sm:w-36 sm:h-36 md:w-30 md:h-30">
+              <Image src={Android} alt="android" layout="fill" />
+            </div>
+          </>
+        )}
       </div>
-  )
+    </>
+  );
 }
 
-export default CommingSoonComp
+export default CommingSoonComp;

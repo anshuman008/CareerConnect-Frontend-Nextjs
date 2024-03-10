@@ -1,9 +1,29 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useState } from 'react';
 
 const YoutubeVideoSlide = () => {
+  // State to store the screen width
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Set state based on the window's width
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    // Set the initial value
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const sliderStyle: React.CSSProperties = {
     display: 'flex',
-    overflowX: 'auto', // No error should be here now
+    overflowX: 'auto',
     width: '100%',
     gap: '20px',
     padding: '20px',
@@ -12,11 +32,12 @@ const YoutubeVideoSlide = () => {
 
   const iframeStyle: React.CSSProperties = {
     flex: '0 0 auto',
-    width: '30vw',
-    height: '20vw',
+    width: isMobile ? '90%' : '30vw',
+    height: isMobile ? '50%' : '20vw',
     borderRadius: '10px',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.15)',
     scrollSnapAlign: 'start',
+    margin: 'auto',
   };
 
   return (

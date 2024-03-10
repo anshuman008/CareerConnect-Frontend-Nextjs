@@ -179,11 +179,11 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
 
 
 const ABOUT_PAGE_CHILD: NavItemType[] = [
-  {
-    id: ncNanoId(),
-    href: "/about",
-    name: "About Us",
-  },
+  // {
+  //   id: ncNanoId(),
+  //   href: "/about",
+  //   name: "About Us",
+  // },
   {
     id: ncNanoId(),
     href: "/contactus",
@@ -222,10 +222,10 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
 
   {
     id: ncNanoId(),
-    href: "/collection-2",
+    href: "/about",
     name: "About Us",
-    type: "dropdown",
-    children: ABOUT_PAGE_CHILD,
+    // type: "dropdown",
+    // children: ABOUT_PAGE_CHILD,
   },
   // {
   //   id: ncNanoId(),
@@ -234,11 +234,11 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
   //   type: "megaMenu",
   //   children: MEGAMENU_TEMPLATES,
   // },
-  // {
-  //   id: ncNanoId(),
-  //   href: "/search",
-  //   name: "Explore",
-  //   type: "dropdown",
-  //   children: OTHER_PAGE_CHILD,
-  // },
+  {
+    id: ncNanoId(),
+    href: "/search",
+    name: "Explore",
+    type: "dropdown",
+    children: ABOUT_PAGE_CHILD,
+  },
 ];
