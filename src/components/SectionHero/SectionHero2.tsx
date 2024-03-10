@@ -1,6 +1,6 @@
 "use client";
 
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import backgroundLineSvg from "@/images/Moon.svg";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 import Next from "@/shared/NextPrev/Next";
@@ -19,6 +19,18 @@ let TIME_OUT: NodeJS.Timeout | null = null;
 
 const SectionHero2: FC<SectionHero2Props> = ({ className = "" }) => {
   // =================
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const [indexActive, setIndexActive] = useState(0);
   const [isRunning, toggleIsRunning] = useBoolean(true);
 
@@ -138,9 +150,10 @@ const SectionHero2: FC<SectionHero2Props> = ({ className = "" }) => {
             className={`relative z-[1] w-full max-w-3xl space-y-8 sm:space-y-14 nc-SectionHero2Item__left`}
           >
             <div className="space-y-5 sm:space-y-6">
-              <span className="nc-SectionHero2Item__subheading block text-base md:text-xl text-slate-700 font-medium">
+              {isMobile ? <div/> :  <span className="nc-SectionHero2Item__subheading block text-base md:text-xl text-slate-700 font-medium">
                 {item.subHeading}
-              </span>
+              </span>}
+             
               <h2 className="nc-SectionHero2Item__heading font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl !leading-[114%] text-slate-900">
                 {item.heading}
               </h2>
