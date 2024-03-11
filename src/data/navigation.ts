@@ -236,7 +236,7 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
   // },
   {
     id: ncNanoId(),
-    href: "/search",
+    href: "/",
     name: "Explore",
     type: "dropdown",
     children: ABOUT_PAGE_CHILD,
