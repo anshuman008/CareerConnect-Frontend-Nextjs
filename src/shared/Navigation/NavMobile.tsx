@@ -166,7 +166,7 @@ const NavMobile: React.FC<NavMobileProps> = ({
     <div className="overflow-y-auto w-full h-screen py-2 transition transform shadow-lg ring-1 dark:ring-neutral-700 bg-white dark:bg-neutral-900 divide-y-2 divide-neutral-100 dark:divide-neutral-800">
       <div className="py-6 px-5">
         <Logo />
-        <div className="flex flex-col mt-5 text-slate-600 dark:text-slate-300 text-sm">
+        <div className="flex flex-col mt-2 text-slate-600 dark:text-slate-300 text-sm">
           <span>
             Discover the most outstanding articles on all topics of life. Write
             your stories and share them
@@ -183,15 +183,15 @@ const NavMobile: React.FC<NavMobileProps> = ({
           <ButtonClose onClick={onClickClose} />
         </span>
 
-        <div className="mt-5">{renderSearchForm()}</div>
+        {/* <div className="mt-2">{renderSearchForm()}</div> */}
       </div>
       <ul className="flex flex-col py-6 px-2 space-y-1">
         {data.map(_renderItem)}
       </ul>
       <div className="flex items-center justify-between py-6 px-5 space-x-2">
-        <ButtonPrimary href={"/"} className="!px-10">
-          Buy this template
-        </ButtonPrimary>
+        {/* <ButtonPrimary href={"/"} className="!px-10">
+          created by : Anshuman
+        </ButtonPrimary> */}
       </div>
     </div>
   );

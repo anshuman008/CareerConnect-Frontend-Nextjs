@@ -25,23 +25,16 @@ const Logo: React.FC<LogoProps> = ({
       {/* PLEASE UN COMMENT BELLOW CODE AND USE IT */}
       {img ? (
         <Image
-         style={{height:90,width:90,margin:50}}
           src={logoImage}
           alt="Logo"
-          sizes="400px"
+          className="h-20 w-20"
           priority
         />
       ) : (
         "Logo Here"
       )}
       {imgLight && (
-        <Image
-          className="hidden h-8 sm:h-10 w-auto dark:block"
-          src={imgLight}
-          alt="Logo-Light"
-          sizes="200px"
-          priority
-        />
+    <div/>
       )}
     </Link>
   );
