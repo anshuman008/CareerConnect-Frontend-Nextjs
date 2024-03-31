@@ -18,11 +18,11 @@ const poppins = Poppins({
 export default function RootLayout({ children, params }: { children: React.ReactNode; params: any; }) {
   return (
     <>
-      <Script
-           type="text/javascript"
-           src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
-           id="aisensy-wa-widget"
-           widget-id="V3khU8"
+      <Script 
+       type="text/javascript"
+       src="https://d3mkw6s8thqya7.cloudfront.net/integration-plugin.js"
+       id="aisensy-wa-widget"
+       widget-id="XK1LbL"
       />
       <html lang="en" dir="" className={poppins.className}>
         <body className="bg-white text-base dark:bg-neutral-900 text-neutral-900 dark:text-neutral-200">
