@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Include this in your global CSS file */
+@keyframes highlight {
+    0%, 100% {
+      transform: scale(1);
+      background-color: #f56565; /* Your highlight color */
+    }
+    50% {
+      transform: scale(1.1);
+      background-color: #fc8181; /* A lighter shade for the pulse effect */
+    }
+  }
+  
+  .highlight-animation {
+    animation: highlight 2s infinite;
+  }
+  

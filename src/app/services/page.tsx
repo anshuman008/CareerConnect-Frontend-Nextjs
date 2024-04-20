@@ -1,65 +1,88 @@
-import React, { FC } from "react";
-import SectionSliderCollections from "@/components/SectionSliderLargeProduct";
-import SectionPromo1 from "@/components/SectionPromo1";
-import ProductCard from "@/components/ProductCard";
-import { PRODUCTS } from "@/data/data";
-import SidebarFilters from "@/components/SidebarFilters";
-import CommingSoon from "@/components/CommingSoon";
+const PageCollection2 = () => {
+  const plans = [
+    {
+      name: 'Starter',
+      price: '499',
+      features: [
+        'Rank Wise Branch Predictor',
+        'College-Branch Predictor/Chances',
+        'Choice Filling Order According to Rank',
+        'Roundwise Admission Predictor',
+        'Counselling Tips & Notification',
+      ],
+      buttonText: 'Get started',
+      highlighted: false,
+    },
+    {
+      name: 'All In One',
+      price: '999',
+      features: [
+        'Rank Wise College Predictor',
+        'Rank Wise Branch Predictor',
+        'College-Branch Predictor/Chances',
+        'Choice Filling Order According to Rank',
+        'Roundwise Admission Predictor',
+        'Counselling Tips & Notification',
+      ],
+      buttonText: 'Get started',
+      highlighted: false,
+    },
+    {
+      name: 'Plus',
+      price: '1499',
+      features: [
+        'Rank Wise College Predictor',
+        'Rank Wise Branch Predictor',
+        'College-Branch Predictor/Chances',
+        'Choice Filling Order According to Rank',
+        'Roundwise Admission Predictor',
+        'Counselling Tips & Notification',
+        'Chat/Call Support for All counselling except Delhi & Jaypee',
+      ],
+      buttonText: 'Contact Sales',
+      highlighted: true,
+    },
+  ];
 
 
-const PageCollection2 = ({}) => {
+   // This function will return additional styling for the super highlighted section
+  const highlightClass = (highlighted: boolean) => {
+    return highlighted ? 'bg-[#5e00d1] text-white' : 'bg-green-500 text-white';
+  };
+
   return (
-
-    <div className={`nc-PageCollection2`}>
-      <CommingSoon/>
+    <div className="bg-gray-50 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-8">
+          {plans.map((plan, index) => (
+            <div key={index} className={`max-w-xs w-full rounded-lg shadow-lg p-6 ${plan.highlighted ? 'border-4 border-blue-500 bg-blue-100' : 'bg-white'}`}>
+              <h3 className={`text-lg font-medium ${plan.highlighted ? 'text-blue-600' : 'text-gray-900'}`}>{plan.name}</h3>
+              <p className="text-4xl font-bold text-gray-900">{`₹${plan.price}`}</p>
+              <ul className="mb-8">
+                {plan.features.map((feature, index) => (
+                  <li key={index} className="flex items-start mt-2">
+                    <svg className="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="ml-3 text-base text-gray-700">{feature}</span>
+                  </li>
+                ))}
+                <li key="counseling-mode" className={`flex items-start mt-2 rounded-lg p-3 ${highlightClass(plan.highlighted)}`}>
+                  <svg className="flex-shrink-0 h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c3.31 0 6 2.69 6 6s-6 6-6 6-6-2.69-6-6 2.69-6 6-6z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v4l2 2" />
+                  </svg>
+                  <span className="ml-3 text-base">{plan.name === 'Plus' ? 'Offline Counseling Available' : 'Online Counseling Mode'}</span>
+                </li>
+              </ul>
+              <button className={`${plan.highlighted ? 'bg-blue-600 text-white' : 'bg-blue-500 text-white'} w-full py-2 px-4 rounded-md text-lg font-medium hover:bg-blue-700 transition-colors`}>
+                {plan.buttonText}
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-
-    // product section hai yahh
-
-    // <div className={`nc-PageCollection2`}>
-      
-    //    <div className="container py-16 lg:pb-28 lg:pt-20 space-y-16 sm:space-y-20 lg:space-y-28">
-    //     <div className="space-y-10 lg:space-y-14">
-    //       {/* HEADING */}
-    //       <div className="max-w-screen-sm">
-    //         <h2 className="block text-2xl sm:text-3xl lg:text-4xl font-semibold">
-    //           Man collection
-    //         </h2>
-    //         <span className="block mt-4 text-neutral-500 dark:text-neutral-400 text-sm sm:text-base">
-    //           We not only help you design exceptional products, but also make it
-    //           easy for you to share your designs with more like-minded people.
-    //         </span>
-    //       </div>
-
-    //       <hr className="border-slate-200 dark:border-slate-700" />
-    //       <main>
-    //         {/* LOOP ITEMS */}
-    //         <div className="flex flex-col lg:flex-row">
-    //           <div className="lg:w-1/3 xl:w-1/4 pr-4">
-    //             <SidebarFilters />
-    //           </div>
-    //           <div className="flex-shrink-0 mb-10 lg:mb-0 lg:mx-4 border-t lg:border-t-0"></div>
-    //           <div className="flex-1 ">
-    //             <div className="flex-1 grid sm:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-10 ">
-    //               {PRODUCTS.map((item, index) => (
-    //                 <ProductCard data={item} key={index} />
-    //               ))}
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </main>
-    //     </div>
-
-    //     {/* === SECTION 5 === */}
-    //     <hr className="border-slate-200 dark:border-slate-700" />
-
-    //     <SectionSliderCollections />
-    //     <hr className="border-slate-200 dark:border-slate-700" />
-
-    //     {/* SUBCRIBES */}
-    //     <SectionPromo1 />
-    //     </div>
-    // </div>
   );
 };
 
