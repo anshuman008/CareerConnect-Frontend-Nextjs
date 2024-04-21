@@ -13,7 +13,7 @@ const PageCollection2 = () => {
         'Round-wise Admission Predictor',
         'Counseling Tips & Important Notification'
       ],
-      buttonText: 'Get started',
+      buttonText: 'PAY NOW',
       highlighted: false,
       redirectLink: 'https://pages.razorpay.com/499Starter'
     },
@@ -28,7 +28,7 @@ const PageCollection2 = () => {
         'Choice Filling Order According to Rank',
         'Round-wise Admission Predictor',
       ],
-      buttonText: 'Get started',
+      buttonText: 'PAY NOW',
       highlighted: false,
       redirectLink: 'https://pages.razorpay.com/799allinoneonline'
     },
@@ -43,7 +43,7 @@ const PageCollection2 = () => {
         'Choice Filling Order According to Rank',
         'Round-wise Admission Predictor',
       ],
-      buttonText: 'Contact Sales',
+      buttonText: 'PAY NOW',
       highlighted: true,
       redirectLink: 'https://pages.razorpay.com/999allinoneoffline'
     },
