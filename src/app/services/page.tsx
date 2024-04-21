@@ -1,46 +1,51 @@
+import Link from "next/link";
+
 const PageCollection2 = () => {
   const plans = [
     {
-      name: 'Starter',
+      name: 'Starter Package',
       price: '499',
       features: [
+        'Rank Wise College Predictor',
         'Rank Wise Branch Predictor',
         'College-Branch Predictor/Chances',
         'Choice Filling Order According to Rank',
-        'Roundwise Admission Predictor',
-        'Counselling Tips & Notification',
+        'Round-wise Admission Predictor',
+        'Counseling Tips & Important Notification'
       ],
       buttonText: 'Get started',
       highlighted: false,
+      redirectLink: 'https://pages.razorpay.com/499Starter'
     },
     {
-      name: 'All In One',
+      name: 'All In One Package ONLINE',
+      price: '799',
+      features: [
+        'One Time Online Mentor Session for 1 hr',
+        'Rank Wise College Predictor',
+        'Rank Wise Branch Predictor',
+        'College-Branch Predictor/Chances',
+        'Choice Filling Order According to Rank',
+        'Round-wise Admission Predictor',
+      ],
+      buttonText: 'Get started',
+      highlighted: false,
+      redirectLink: 'https://pages.razorpay.com/799allinoneonline'
+    },
+    {
+      name: 'All In One Package OFFLINE',
       price: '999',
       features: [
+        'One Time Offline Mentor Session for 1 hr',
         'Rank Wise College Predictor',
         'Rank Wise Branch Predictor',
         'College-Branch Predictor/Chances',
         'Choice Filling Order According to Rank',
-        'Roundwise Admission Predictor',
-        'Counselling Tips & Notification',
-      ],
-      buttonText: 'Get started',
-      highlighted: false,
-    },
-    {
-      name: 'Plus',
-      price: '1499',
-      features: [
-        'Rank Wise College Predictor',
-        'Rank Wise Branch Predictor',
-        'College-Branch Predictor/Chances',
-        'Choice Filling Order According to Rank',
-        'Roundwise Admission Predictor',
-        'Counselling Tips & Notification',
-        'Chat/Call Support for All counselling except Delhi & Jaypee',
+        'Round-wise Admission Predictor',
       ],
       buttonText: 'Contact Sales',
       highlighted: true,
+      redirectLink: 'https://pages.razorpay.com/999allinoneoffline'
     },
   ];
 
@@ -72,12 +77,15 @@ const PageCollection2 = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8c3.31 0 6 2.69 6 6s-6 6-6 6-6-2.69-6-6 2.69-6 6-6z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v4l2 2" />
                   </svg>
-                  <span className="ml-3 text-base">{plan.name === 'Plus' ? 'Offline Counseling Available' : 'Online Counseling Mode'}</span>
+                  <span className="ml-3 text-base">{plan.name === 'All In One Package OFFLINE' ? 'Offline Counseling Available' : 'Online Counseling Mode'}</span>
                 </li>
               </ul>
-              <button className={`${plan.highlighted ? 'bg-blue-600 text-white' : 'bg-blue-500 text-white'} w-full py-2 px-4 rounded-md text-lg font-medium hover:bg-blue-700 transition-colors`}>
+              <Link href={{pathname:plan.redirectLink}}>
+                 <button className={`${plan.highlighted ? 'bg-blue-600 text-white' : 'bg-blue-500 text-white'} w-full py-2 px-4 rounded-md text-lg font-medium hover:bg-blue-700 transition-colors`}>
                 {plan.buttonText}
               </button>
+              </Link>
+           
             </div>
           ))}
         </div>
