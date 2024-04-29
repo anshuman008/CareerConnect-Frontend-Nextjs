@@ -52,6 +52,12 @@ const Refund = () => {
           <strong>Policy Updates:</strong>
           Career Connect Services reserves the right to modify this refund policy. We recommend clients review our policy periodically to stay updated on any changes.
         </li>
+        
+        <li style={style.paragraph}>
+  <strong>Time Line for Refund:</strong>
+  Refunds will take around 12 to 15 days to process. On some products, refunds are not applicable.
+</li>
+
       </ol>
 
       <div style={style.contactInfo}>
