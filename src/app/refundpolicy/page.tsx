@@ -55,7 +55,7 @@ const Refund = () => {
         
         <li style={style.paragraph}>
   <strong>Time Line for Refund:</strong>
-  Refunds will take around 12 to 15 days to process. On some products, refunds are not applicable.
+  Refunds will take around 12 to 15 workings days to process. On some products, refunds are not applicable.
 </li>
 
       </ol>

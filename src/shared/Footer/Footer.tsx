@@ -30,6 +30,8 @@ const widgetMenus: WidgetFooterMenu[] = [
       { href: "/contactus", label: "Contact Us" },
       { href: "/privacypolicy", label: "Privacy Policy" },
       { href: "/tnc", label: "Terms and Conditions" },
+      { href: "/refundpolicy", label: "Refund Policy" },
+
     ],
   },
   {
