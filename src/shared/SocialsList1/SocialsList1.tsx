@@ -13,7 +13,7 @@ export interface SocialsList1Props {
 const socials: SocialType[] = [
   { name: "Facebook", icon: facebook, href: "#" },
   { name: "Youtube", icon: youtube, href: "https://www.youtube.com/@careerconnectservices" },
-  { name: "Telegram", icon: telegram, href: "https://t.me/joinchat/AAAAAEd_g24foFA_rvzlTw" },
+  // { name: "Telegram", icon: telegram, href: "https://t.me/joinchat/AAAAAEd_g24foFA_rvzlTw" },
   { name: "Twitter", icon: twitter, href: "#" },
 ];
 
