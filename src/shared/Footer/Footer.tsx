@@ -99,6 +99,10 @@ const Footer: React.FC = () => {
         {widgetMenus.map(renderWidgetMenuItem)}
         <CommingSoonComp/>
       </div>
+
+     <div className="flex justify-center items-center mt-5 px-5">
+     <h1>Copyright©CAREER CONNECT SERVICES. All rights reserved </h1>
+     </div>
     </div>
   );
 };
