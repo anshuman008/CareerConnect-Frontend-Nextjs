@@ -11,7 +11,7 @@ import { Alert } from "@/shared/Alert/Alert";
 const info = [
   {
     title: "🗺 ADDRESS",
-    desc: "A-78 Sector 49 Noida 201301",
+    desc: "Delhi, India",
   },
   {
     title: "💌 EMAIL",
