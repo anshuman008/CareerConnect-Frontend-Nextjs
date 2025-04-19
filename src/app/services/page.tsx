@@ -104,7 +104,7 @@ const ServicesPage = () => {
               href="mailto:support@careerconnect.com" 
               className="text-blue-600 hover:text-blue-700 font-medium"
             >
-              support@careerconnect.com
+             help.careerconnectservices@gmail.com
             </a>
           </p>
         </div>
