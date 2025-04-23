@@ -1,4 +1,5 @@
-import REAP from './REAP.JPG';
+// @ts-nocheck
+import REAP from './REAP.JPG'
 import ALLINONE from './ALL-IN-ONE-COLLEGES.JPG';
 import AKTU from './AKTU.jpg';
 import HBTU from './HBTU.JPG';
