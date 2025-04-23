@@ -1,14 +1,16 @@
 import { plansData } from "@/data/plansData";
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode, Key } from "react";
 
 interface Plan {
   title: string;
   subtitle: string;
-  price: number;
+  price?: number;
   currency: string;
   url: string;
   features: string[];
   popular: boolean;
   color: string;
+  poster?: string;
 }
 
 const ServicesPage = () => {
@@ -22,10 +24,13 @@ const ServicesPage = () => {
           <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Get expert guidance and comprehensive support for your college admission journey
           </p>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+           If you want help in selecting the below premium counselling packages please contact us on WhatsApp at <a href="https://wa.me/message/7KJWOTPGINU7N1" className="text-blue-600 hover:text-blue-700 font-medium">+91 9211415628</a>
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-          {plansData.map((plan: Plan, index: number) => (
+          {plansData.map((plan: any, index: number) => (
             <div 
               key={index} 
               className={`relative rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
@@ -37,6 +42,16 @@ const ServicesPage = () => {
               {plan.popular && (
                 <div className="absolute top-[-5px] right-0 bg-orange-500 text-white px-2 py-0.5 rounded-tl-lg">
                   <span className="text-xs font-semibold">MOST POPULAR</span>
+                </div>
+              )}
+
+         {plan.poster && (
+                <div className="w-full h-auto z-10 flex items-center justify-center bg-black ">
+                  <img 
+                    src={plan.poster} 
+                    alt={plan.title} 
+                    className="h-full w-full overflow-clip" 
+                  />
                 </div>
               )}
               
@@ -52,19 +67,21 @@ const ServicesPage = () => {
                   </p>
                 </div>
                 
-                <div className="mb-4">
-                  <div className="flex items-baseline">
-                    <span className={`text-2xl sm:text-3xl font-extrabold ${
-                      plan.popular ? 'text-orange-600' : 'text-gray-900'
-                    }`}>
-                      ₹{plan.price}
-                    </span>
-                    <span className="text-sm text-gray-500 ml-1">/one-time</span>
-                  </div>
+              {
+                plan.price &&   <div className="mb-4">
+                <div className="flex items-baseline">
+                  <span className={`text-2xl sm:text-3xl font-extrabold ${
+                    plan.popular ? 'text-orange-600' : 'text-gray-900'
+                  }`}>
+                    ₹{plan.price}
+                  </span>
                 </div>
+              </div>
 
-                <div className="space-y-2 mb-4">
-                  {plan.features.map((feature, idx) => (
+              }
+             {
+                plan.features&&<div className="space-y-2 mb-4">
+                  {plan.features.map((feature: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined, idx: Key | null | undefined) => (
                     <div key={idx} className="flex items-start">
                       <svg className={`flex-shrink-0 h-4 w-4 mt-0.5 ${
                         plan.popular ? 'text-orange-500' : 'text-green-500'
@@ -75,9 +92,13 @@ const ServicesPage = () => {
                     </div>
                   ))}
                 </div>
+             }
 
                 <a 
-                  href={plan.url} 
+                  href={plan.title === 'IPU Guaranteed Allotment Support' || plan.title === 'Counselling Combo'
+                    ? 'https://wa.me/message/7KJWOTPGINU7N1'
+                    : plan.url
+                  } 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block w-full"
