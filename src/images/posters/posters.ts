@@ -14,7 +14,16 @@ import COMBO from './COMBO.JPG';
 import TOP_BRANDED from './TOP-BRANDED-COLLEGES.JPG';
 import JAC_CHANDIGARH from './JAC-CHANDIGARH.png';
 import JAC_DELHI_SPOT from './JAC-DELHI-SPOT.png';
+import JOSAACSAB from './JOSAACSAB.png';
+
 export const posters = [
+
+  {
+    name: 'ALL IN ONE ONLINE',
+    image: ALLINONE,
+    price: 1499,
+    subtitle: 'All In One Online',
+  },
   {
     name: 'REAP',
     image: REAP,
@@ -44,6 +53,12 @@ export const posters = [
     image: JAC_DELHI,
     price: 9999,
     subtitle: 'JAC-Delhi Complete Support (including Spot Round)',
+  },
+  {
+    name: 'JOSA CSAB',
+    image: JOSAACSAB,
+    price: 9999,
+    subtitle: 'JOSA/CSAB Complete Support',
   },
   {
     name: 'JAC-Delhi Spot',
@@ -92,10 +107,11 @@ export const posters = [
     subtitle: 'Counselling Combo',
   },
 
-  // {
-  //   name: 'TOP BRANDED COLLEGES',
-  //   image: TOP_BRANDED,
-  // }
+  {
+    name: 'TOP BRANDED COLLEGES',
+    image: TOP_BRANDED,
+    subtitle: 'Complete Support For Top Brand Colleges',
+  }
 ];
 
 
