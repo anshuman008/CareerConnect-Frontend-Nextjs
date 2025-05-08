@@ -1,85 +1,89 @@
 // @ts-nocheck
-import REAP from "./REAP.JPG";
+import REAP from "./REAP.png";
 import ALLINONE from "./ALL-IN-ONE-COLLEGES.JPG";
-import AKTU from "./AKTU.jpg";
-import HBTU from "./HBTU.JPG";
-import MP_DTE from "./MP-DTE.JPG";
+import UP from "./UP.png";
+import MP_DTE from "./MPDTE.png";
 import JAC_DELHI from "./JAC-DELHI.JPG";
-import MHT_SET from "./MHT-SET.JPG";
-import HSTES from "./HSTES.JPG";
+import MHT_CET from "./MHTCET.png";
+import HSTES from "./HSTES.png";
 import IPU_GUARANTEED from "./IPU-GUARANTEED.JPG";
-import WBUEE from "./WBUEE.JPG";
+import WBJEE from "./WBJEE.png";
 import COMEDK from "./comedk.JPG";
 import COMBO from "./COMBO.JPG";
 import TOP_BRANDED from "./TOP-BRANDED-COLLEGES.JPG";
-import JAC_CHANDIGARH from "./JAC-CHANDIGARH.png";
+import JAC_CHANDIGARH from "./JACCHANDIGARH.png";
 import JAC_DELHI_SPOT from "./JAC-DELHI-SPOT.png";
 import JOSAACSAB from "./JOSAACSAB.png";
 
 export const posters = [
   {
-    name: "IPU Guaranteed Allotment Support",
+    name: "IPU Delhi Guaranteed Allotment Support",
     image: IPU_GUARANTEED,
-    subtitle: "IPU Guaranteed Allotment Support",
+    subtitle: "IPU Delhi Guaranteed Allotment Support",
   },
   {
     name: "Counselling Combo",
     image: COMBO,
-    subtitle: "Counselling Combo",
+    subtitle: "All 54 Counselling Complete Support",
   },
   {
     name: "TOP BRANDED COLLEGES",
     image: TOP_BRANDED,
     price: 9999,
-    subtitle: "Complete Support For BITS/DAIICT/THAPAR/VIT/MANIPAL/JAYPEE/SRM/KIIT/ NMIMS/K J Somaiya/D Y PATIL/SIT PUNE/MIT WPU/BIT JAIPUR",
+    subtitle:
+      "Complete Support For BITS/DAIICT/LNMIIT/THAPAR/VIT/MANIPAL/JAYPEE/SRM/KIIT/ NMIMS/K J Somaiya/D Y PATIL/SIT PUNE/MIT WPU/BIT JAIPUR",
   },
   {
     name: "JOSAA & CSAB",
     image: JOSAACSAB,
     price: 9999,
-    subtitle: "JOSA/CSAB Complete Support",
+    subtitle: "IITs/ NITs/ IIITs/ GFTIs Guaranteed Allotment Support",
   },
   {
     name: "JAC DELHI",
     image: JAC_DELHI,
     price: 9999,
-    subtitle: "JAC-Delhi Complete Support (including Spot Round)",
+    subtitle:
+      "IIIT DELHI/NSUT/DTU/IGDTUW/DSEU Complete Support (including Spot Round)",
   },
   {
     name: "JAC-Delhi Spot",
     image: JAC_DELHI_SPOT,
     price: 4999,
-    subtitle: "JAC-Delhi Spot Round Support Only",
+    subtitle: "IIIT DELHI/NSUT/DTU/IGDTUW/DSEU Spot Round Support Only",
   },
   {
-    name: "HSTES Complete Support",
+    name: "MHT-CET Maharashtra Complete Support",
+    image: MHT_CET,
+    price: 9999,
+    subtitle: "Maharashtra Complete Support (including ILC Rounds)",
+  },
+  {
+    name: "HSTES Haryana Complete Support",
     image: HSTES,
-    price: 9999,
-    subtitle: "HSTES Complete Support",
+    price: 4999,
+    subtitle: "Haryana Complete Support",
   },
+
   {
-    name: "MHT-CET Complete Support",
-    image: MHT_SET,
-    price: 9999,
-    subtitle: "MHT-CET Complete Support (including ILC Rounds)",
-  },
-  {
-    name: "COMEDK Complete Support",
+    name: "COMEDK Karnataka Complete Support",
     image: COMEDK,
     price: 4999,
-    subtitle: "COMEDK Complete Support",
+    subtitle: "Karnataka Complete Support",
   },
   {
     name: "AKTU/UPTU/UPTAC & MMMUT & HBTU & MJPU & CSJMU",
-    image: HBTU,
+    image: UP,
     price: 9999,
-    subtitle: "AKTU/UPTU/UPTAC & MMMUT & HBTU & MJPU & CSJMU Special Package",
+    subtitle:
+      "Uttar Pradesh Guaranteed Allotment Complete Support (including all Spot Rounds)",
   },
   {
     name: "MP-DTE Complete Support",
     image: MP_DTE,
     price: 9999,
-    subtitle: "MP-DTE Complete Support (including CLC Rounds)",
+    subtitle:
+      "Madhya Pradesh Guaranteed Allotment Complete Support (including all CLC Rounds)",
   },
   {
     name: "JAC CHANDIGARH",
@@ -88,15 +92,15 @@ export const posters = [
     subtitle: "JAC-Chandigarh Complete Support",
   },
   {
-    name: "REAP",
+    name: "REAP Rajasthan",
     image: REAP,
     price: 4999,
-    subtitle: "Reap Complete Support",
+    subtitle: "Rajasthan Complete Support (including Spot Rounds)",
   },
   {
-    name: "WBJEE Complete Support",
-    image: WBUEE,
+    name: "WBJEE West Bengal Complete Support",
+    image: WBJEE,
     price: 4999,
-    subtitle: "WBJEE Complete Support (including Spot Rounds)",
+    subtitle: "West Bengal Guaranteed Allotment Complete Support (including Spot Rounds)",
   },
 ];
