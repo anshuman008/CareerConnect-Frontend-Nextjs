@@ -40,16 +40,16 @@ export const posters = [
     subtitle: "IITs/ NITs/ IIITs/ GFTIs Guaranteed Allotment Support",
   },
   {
-    name: "JAC DELHI",
+    name: "JAC DELHI + DSEU",
     image: JAC_DELHI,
-    price: 9999,
+    price: 19999,
     subtitle:
       "IIIT DELHI/NSUT/DTU/IGDTUW/DSEU Complete Support (including Spot Round)",
   },
   {
-    name: "JAC-Delhi Spot",
+    name: "JAC-Delhi + DSEU Spot Special",
     image: JAC_DELHI_SPOT,
-    price: 4999,
+    price: 9999,
     subtitle: "IIIT DELHI/NSUT/DTU/IGDTUW/DSEU Spot Round Support Only",
   },
   {
