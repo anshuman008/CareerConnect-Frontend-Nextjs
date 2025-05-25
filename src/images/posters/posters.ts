@@ -3,7 +3,7 @@ import REAP from "./REAP.png";
 import ALLINONE from "./ALL-IN-ONE-COLLEGES.JPG";
 import UP from "./UP.png";
 import MP_DTE from "./MPDTE.png";
-import JAC_DELHI from "./JAC-DELHI.JPG";
+import JAC_DELHI from "./JAC-DELHI.png";
 import MHT_CET from "./MHTCET.png";
 import HSTES from "./HSTES.png";
 import IPU_GUARANTEED from "./IPU-GUARANTEED.JPG";
