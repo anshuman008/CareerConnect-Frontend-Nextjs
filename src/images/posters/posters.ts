@@ -27,11 +27,11 @@ export const posters = [
     subtitle: "All 54 Counselling Complete Support",
   },
   {
-    name: "TOP BRANDED COLLEGES",
-    image: TOP_BRANDED,
-    price: 9999,
+    name: "JAC DELHI + DSEU",
+    image: JAC_DELHI,
+    price: 19999,
     subtitle:
-      "Complete Support For BITS/DAIICT/LNMIIT/THAPAR/VIT/MANIPAL/JAYPEE/SRM/KIIT/ NMIMS/K J Somaiya/D Y PATIL/SIT PUNE/MIT WPU/BIT JAIPUR",
+      "IIIT DELHI/NSUT/DTU/IGDTUW/DSEU Complete Support (including Spot Round)",
   },
   {
     name: "JOSAA & CSAB",
@@ -40,17 +40,17 @@ export const posters = [
     subtitle: "IITs/ NITs/ IIITs/ GFTIs Guaranteed Allotment Support",
   },
   {
-    name: "JAC DELHI + DSEU",
-    image: JAC_DELHI,
-    price: 19999,
-    subtitle:
-      "IIIT DELHI/NSUT/DTU/IGDTUW/DSEU Complete Support (including Spot Round)",
-  },
-  {
     name: "JAC-Delhi + DSEU Spot Special",
     image: JAC_DELHI_SPOT,
     price: 9999,
     subtitle: "IIIT DELHI/NSUT/DTU/IGDTUW/DSEU Spot Round Support Only",
+  },
+  {
+    name: "TOP BRANDED COLLEGES",
+    image: TOP_BRANDED,
+    price: 9999,
+    subtitle:
+      "Complete Support For BITS/DAIICT/LNMIIT/THAPAR/VIT/MANIPAL/JAYPEE/SRM/KIIT/ NMIMS/K J Somaiya/D Y PATIL/SIT PUNE/MIT WPU/BIT JAIPUR",
   },
   {
     name: "MHT-CET Maharashtra Complete Support",
@@ -58,17 +58,11 @@ export const posters = [
     price: 9999,
     subtitle: "Maharashtra Complete Support (including ILC Rounds)",
   },
-  {
-    name: "HSTES Haryana Complete Support",
-    image: HSTES,
-    price: 4999,
-    subtitle: "Haryana Complete Support",
-  },
 
   {
     name: "COMEDK Karnataka Complete Support",
     image: COMEDK,
-    price: 4999,
+    price: 9999,
     subtitle: "Karnataka Complete Support",
   },
   {
@@ -84,6 +78,12 @@ export const posters = [
     price: 9999,
     subtitle:
       "Madhya Pradesh Guaranteed Allotment Complete Support (including all CLC Rounds)",
+  },
+  {
+    name: "HSTES Haryana Complete Support",
+    image: HSTES,
+    price: 4999,
+    subtitle: "Haryana Complete Support",
   },
   {
     name: "JAC CHANDIGARH",
