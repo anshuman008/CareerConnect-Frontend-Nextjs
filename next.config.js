@@ -18,6 +18,7 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
+    domains: ['rvydrxzixlfeucdftvda.supabase.co', 'rvydrxzixlfeucdftvda.supabase.com'],
   },
 };
 
