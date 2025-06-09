@@ -214,8 +214,8 @@ export default function CreateBlogPage() {
               Content
             </label>
             <Editor
-              apiKey={process.env.NEXT_PUBLIC_TINYMCE_API_KEY as string}
-              onInit={(evt, editor) => editorRef.current = editor}
+              apiKey="h1nos62wt2la5138xjadpf0bsgwyxlwr02cdo8ouj5lwsgmk"
+              onInit={(evt:any, editor:any) => editorRef.current = editor}
               init={{
                 height: 500,
                 menubar: true,
