@@ -41,7 +41,7 @@ const ServicesPage = () => {
             >
               {plan.popular && (
                 <div className="absolute top-[-5px] right-0 bg-orange-500 text-white px-2 py-0.5 rounded-tl-lg">
-                  <span className="text-xs font-semibold">MOST POPULAR</span>
+                  <span className="text-xs font-semibold">BEST SELLER</span>
                 </div>
               )}
 

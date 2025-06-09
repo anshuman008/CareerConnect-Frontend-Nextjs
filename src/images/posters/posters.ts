@@ -10,7 +10,7 @@ import IPU_GUARANTEED from "./IPU-GUARANTEED.JPG";
 import WBJEE from "./WBJEE.png";
 import COMEDK from "./comedk.JPG";
 import COMBO from "./COMBO.JPG";
-import TOP_BRANDED from "./TOP-BRANDED-COLLEGES.JPG";
+import TOP_BRANDED from "./TOP-BRANDED-COLLEGES.png";
 import JAC_CHANDIGARH from "./JACCHANDIGARH.png";
 import JAC_DELHI_SPOT from "./JAC-DELHI-SPOT.png";
 import JOSAACSAB from "./JOSAACSAB.png";
@@ -33,6 +33,13 @@ export const posters = [
     subtitle:
       "IIIT DELHI/NSUT/DTU/IGDTUW/DSEU Complete Support (including Spot Round)",
   },
+    {
+    name: "TOP BRANDED COLLEGES",
+    image: TOP_BRANDED,
+    price: 19999,
+    subtitle:
+      "Complete Support For BITS/DAIICT/LNMIIT/THAPAR/VIT/MANIPAL/JAYPEE/SRM/KIIT/ NMIMS/K J Somaiya/D Y PATIL/SIT PUNE/MIT WPU/BIT JAIPUR",
+  },
   {
     name: "JOSAA & CSAB",
     image: JOSAACSAB,
@@ -44,13 +51,6 @@ export const posters = [
     image: JAC_DELHI_SPOT,
     price: 9999,
     subtitle: "IIIT DELHI/NSUT/DTU/IGDTUW/DSEU Spot Round Support Only",
-  },
-  {
-    name: "TOP BRANDED COLLEGES",
-    image: TOP_BRANDED,
-    price: 9999,
-    subtitle:
-      "Complete Support For BITS/DAIICT/LNMIIT/THAPAR/VIT/MANIPAL/JAYPEE/SRM/KIIT/ NMIMS/K J Somaiya/D Y PATIL/SIT PUNE/MIT WPU/BIT JAIPUR",
   },
   {
     name: "MHT-CET Maharashtra Complete Support",

@@ -57,7 +57,7 @@ const DATA_sizes = [
 ];
 
 const DATA_sortOrderRadios = [
-  { name: "Most Popular", id: "Most-Popular" },
+  { name: "BEST SELLER", id: "Most-Popular" },
   { name: "Best Rating", id: "Best-Rating" },
   { name: "Newest", id: "Newest" },
   { name: "Price Low - Hight", id: "Price-low-hight" },
