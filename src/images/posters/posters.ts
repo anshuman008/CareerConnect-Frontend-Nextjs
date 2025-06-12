@@ -8,7 +8,7 @@ import MHT_CET from "./MHTCET.png";
 import HSTES from "./HSTES.png";
 import IPU_GUARANTEED from "./IPU-GUARANTEED.JPG";
 import WBJEE from "./WBJEE.png";
-import COMEDK from "./comedk.JPG";
+import COMEDK from "./comedk.jpeg";
 import COMBO from "./COMBO.JPG";
 import TOP_BRANDED from "./TOP-BRANDED-COLLEGES.png";
 import JAC_CHANDIGARH from "./JACCHANDIGARH.png";
