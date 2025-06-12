@@ -6,7 +6,7 @@ interface Plan {
   price?: number;
   currency: string;
   url: string;
-  features: string[];
+  features?: string[];
   popular: boolean;
   color: string;
   poster?: string;
