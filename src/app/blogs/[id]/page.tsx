@@ -21,9 +21,6 @@ export default function BlogPost() {
   const [blog, setBlog] = useState<Blog | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [isAdmin, setIsAdmin] = useState(false);
-  const [showPasswordModal, setShowPasswordModal] = useState(false);
-  const [password, setPassword] = useState('');
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -47,15 +44,7 @@ export default function BlogPost() {
     }
   }, [blogId]);
 
-  const handlePasswordSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (password === 'admin008') {
-      setIsAdmin(true);
-      setShowPasswordModal(false);
-    } else {
-      alert('Invalid password');
-    }
-  };
+
 
   const handleDelete = async () => {
     if (!window.confirm('Are you sure you want to delete this blog post?')) {
@@ -102,36 +91,6 @@ export default function BlogPost() {
     );
   }
 
-  if (showPasswordModal) {
-    return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-        <div className="bg-gray-800 p-8 rounded-lg shadow-xl max-w-md w-full">
-          <h2 className="text-2xl font-bold text-white mb-6">Admin Authentication</h2>
-          <form onSubmit={handlePasswordSubmit}>
-            <div className="mb-4">
-              <label htmlFor="password" className="block text-gray-300 mb-2">
-                Enter Admin Password
-              </label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-2 rounded bg-gray-700 text-white border border-gray-600 focus:border-blue-500 focus:outline-none"
-                required
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors"
-            >
-              Verify
-            </button>
-          </form>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
@@ -157,22 +116,7 @@ export default function BlogPost() {
                 <time>{new Date(blog.date).toLocaleDateString()}</time>
               </div>
             </div>
-            {!isAdmin && (
-              <button
-                onClick={() => setShowPasswordModal(true)}
-                className="text-sm text-gray-400 hover:text-white"
-              >
-                Admin Login
-              </button>
-            )}
-            {isAdmin && (
-              <button
-                onClick={handleDelete}
-                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors"
-              >
-                Delete Post
-              </button>
-            )}
+       
           </div>
         </header>
 
