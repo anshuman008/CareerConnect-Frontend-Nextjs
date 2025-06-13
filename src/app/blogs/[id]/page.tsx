@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 interface Blog {
@@ -16,6 +16,7 @@ interface Blog {
 
 export default function BlogPost() {
   const params = useParams();
+  const router = useRouter();
   const blogId = params.id;
   const [blog, setBlog] = useState<Blog | null>(null);
   const [loading, setLoading] = useState(true);
@@ -43,6 +44,29 @@ export default function BlogPost() {
     }
   }, [blogId]);
 
+
+
+  const handleDelete = async () => {
+    if (!window.confirm('Are you sure you want to delete this blog post?')) {
+      return;
+    }
+
+    try {
+      const response = await fetch(`/api/blogs/${blogId}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to delete blog');
+      }
+
+      router.push('/blogs');
+    } catch (err) {
+      setError('Failed to delete blog. Please try again later.');
+      console.error('Error deleting blog:', err);
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center">
@@ -67,6 +91,7 @@ export default function BlogPost() {
     );
   }
 
+
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100">
       <article className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -82,11 +107,16 @@ export default function BlogPost() {
         )}
         
         <header className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
-          <div className="flex items-center text-gray-400 space-x-4">
-            <span>{blog.author}</span>
-            <span>•</span>
-            <time>{new Date(blog.date).toLocaleDateString()}</time>
+          <div className="flex justify-between items-start">
+            <div>
+              <h1 className="text-4xl font-bold mb-4">{blog.title}</h1>
+              <div className="flex items-center text-gray-400 space-x-4">
+                <span>{blog.author}</span>
+                <span>•</span>
+                <time>{new Date(blog.date).toLocaleDateString()}</time>
+              </div>
+            </div>
+       
           </div>
         </header>
 

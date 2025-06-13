@@ -1,11 +1,20 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { Editor } from '@tinymce/tinymce-react';
 import { useDropzone } from 'react-dropzone';
 import Image from 'next/image';
 import { uploadImage } from '@/utils/supabase';
+
+interface Blog {
+  _id: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  author: string;
+  thumbnail: string;
+}
 
 export default function CreateBlogPage() {
   const router = useRouter();
@@ -22,6 +31,29 @@ export default function CreateBlogPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState('');
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await fetch('/api/blogs');
+        if (!response.ok) {
+          throw new Error('Failed to fetch blogs');
+        }
+        const data = await response.json();
+        setBlogs(data);
+      } catch (err) {
+        console.error('Error fetching blogs:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (isAuthenticated) {
+      fetchBlogs();
+    }
+  }, [isAuthenticated]);
 
   const { getRootProps, getInputProps } = useDropzone({
     accept: {
@@ -48,11 +80,29 @@ export default function CreateBlogPage() {
     }
   };
 
+  const handleDelete = async (blogId: string) => {
+    if (!window.confirm('Are you sure you want to delete this blog post?')) {
+      return;
+    }
+
+    try {
+      const response = await fetch(`/api/blogs/${blogId}`, {
+        method: 'DELETE',
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to delete blog');
+      }
+
+      // Remove the deleted blog from the state
+      setBlogs(blogs.filter(blog => blog._id !== blogId));
+    } catch (err) {
+      console.error('Error deleting blog:', err);
+      alert('Failed to delete blog. Please try again.');
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
-
-
-   console.log("blogData", blogData);
-
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
@@ -103,8 +153,20 @@ export default function CreateBlogPage() {
         throw new Error(data.details || data.error || 'Failed to create blog');
       }
 
+      // Add the new blog to the state
+      setBlogs([data, ...blogs]);
+
+      // Reset form
+      setBlogData({
+        title: '',
+        content: '',
+        excerpt: '',
+        thumbnail: null,
+        thumbnailPreview: '',
+      });
+      editorRef.current?.setContent('');
+
       console.log('Blog created successfully:', data);
-      router.push('/blogs');
     } catch (err) {
       console.error('Error creating blog:', err);
       setError(err instanceof Error ? err.message : 'Failed to create blog. Please try again.');
@@ -253,6 +315,54 @@ export default function CreateBlogPage() {
             </button>
           </div>
         </form>
+
+        {/* Existing Posts Section */}
+        <div className="mt-16">
+          <h2 className="text-2xl font-bold mb-6">Manage Existing Posts</h2>
+          {loading ? (
+            <div className="text-center py-8">Loading posts...</div>
+          ) : (
+            <div className="grid gap-6">
+              {blogs.map((blog) => (
+                <div
+                  key={blog._id}
+                  className="bg-gray-800 rounded-lg p-6 flex items-center justify-between"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="relative h-16 w-16 flex-shrink-0">
+                      <Image
+                        src={blog.thumbnail}
+                        alt={blog.title}
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold">{blog.title}</h3>
+                      <p className="text-sm text-gray-400">
+                        {new Date(blog.date).toLocaleDateString()}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <button
+                      onClick={() => router.push(`/blogs/${blog._id}`)}
+                      className="text-blue-400 hover:text-blue-300"
+                    >
+                      View
+                    </button>
+                    <button
+                      onClick={() => handleDelete(blog._id)}
+                      className="text-red-400 hover:text-red-300"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
