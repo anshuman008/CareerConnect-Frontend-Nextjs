@@ -217,12 +217,12 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
   {
     id: ncNanoId(),
     href: "/services",
-    name: "Services",
+    name: "Engineering Services",
   },
 {
     id: ncNanoId(),
     href: "/med",
-    name: "Neet Plans",
+    name: "Medical Services",
   },
   {
     id: ncNanoId(),
