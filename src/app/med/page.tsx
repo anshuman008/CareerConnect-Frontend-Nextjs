@@ -1,4 +1,4 @@
-import { plansData } from "@/data/plansData";
+import { neetData } from "@/data/neetData";
 
 interface Plan {
   title: string;
