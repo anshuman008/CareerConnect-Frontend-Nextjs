@@ -221,8 +221,8 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
   },
 {
     id: ncNanoId(),
-    href: "/blogs",
-    name: "Blogs",
+    href: "/med",
+    name: "Neet Plans",
   },
   {
     id: ncNanoId(),
