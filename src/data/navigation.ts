@@ -80,7 +80,7 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
       },
       {
         id: ncNanoId(),
-        href: "/services",
+        href: "/serv",
         name: "Category page 2",
       },
     ],
