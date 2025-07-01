@@ -216,8 +216,8 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/services",
-    name: "Engineering Services",
+    href: "/serv",
+    name: "Services",
   },
   {
     id: ncNanoId(),
