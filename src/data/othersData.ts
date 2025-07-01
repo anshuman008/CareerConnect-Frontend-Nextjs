@@ -18,7 +18,7 @@ import { posters } from "@/images/posters/posters";
 
 const defaultData = [
     {
-        title: "Cuet Packag",
+        title: "Cuet Package",
         subtitle: "All In One Package",
         category:"CUET",
         price: 499,
