@@ -18,10 +18,10 @@ import { posters } from "@/images/posters/posters";
 
 const defaultData = [
     {
-        title: "Career Connect Services 999 Package",
+        title: "Cuet Packag",
         subtitle: "All In One Package",
         category:"CUET",
-        price: 999,
+        price: 499,
         currency: "INR",
         url: "https://rzp.io/rzp/allinonecounsellingbundlemed",
         features: [
@@ -40,8 +40,8 @@ const defaultData = [
     },
     {
         title: "Career Connect Services 4999 Package",
-        subtitle: "Single Counselling Full Support",
-        price: 4999,
+        subtitle: "Cuet Counselling Full Support",
+        price: 1499,
         currency: "INR",
         url: "https://rzp.io/rzp/allinonecounsellingsingle",
         features: [
@@ -60,9 +60,9 @@ const defaultData = [
         color: "bg-gradient-to-br from-green-50 to-green-100",
     },
     {
-        title: "Career Connect Services 9999 Package",
+        title: "Cuet/IPU",
         subtitle: "All In One Package Complete Support",
-        price: 9999,
+        price: 4999,
         currency: "INR",
         url: "https://pages.razorpay.com/allinonecounsellingsupport",
         features: [
