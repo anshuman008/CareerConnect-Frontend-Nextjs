@@ -74,7 +74,7 @@ const PlanCard = ({ plan }: { plan: Plan }) => (
   >
     {plan.category && (
       <div className="absolute left-1/2 -translate-x-1/2 top-2 z-30 flex justify-center w-full">
-        <span className="inline-block px-5 py-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold shadow-lg border-2 border-white uppercase tracking-wide">
+        <span className="inline-block px-5 py-1 rounded-full bg-gradient-to-r from-blue-500 to-green-500 text-white text-xs font-bold shadow-lg border-2 border-white uppercase tracking-wide">
           {plan.category}
         </span>
       </div>
@@ -180,9 +180,9 @@ export default function ServPage() {
                 key={tab.name}
                 className={({ selected }) =>
                   classNames(
-                    "px-6 py-2.5 rounded-full text-lg font-semibold focus:outline-none transition",
+                    "px-6 py-2.5 rounded-full text-lg font-semibold focus:outline-none transition-all duration-300",
                     selected
-                      ? "bg-primary-600 text-white shadow"
+                      ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg scale-105 ring-2 ring-purple-300"
                       : "bg-gray-100 text-gray-700 hover:bg-primary-100"
                   )
                 }
