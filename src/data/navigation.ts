@@ -80,7 +80,7 @@ const OTHER_PAGE_CHILD: NavItemType[] = [
       },
       {
         id: ncNanoId(),
-        href: "/serv",
+        href: "/services",
         name: "Category page 2",
       },
     ],
@@ -216,7 +216,7 @@ export const NAVIGATION_DEMO_2: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/serv",
+    href: "/services",
     name: "Services",
   },
   {

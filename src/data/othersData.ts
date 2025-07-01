@@ -76,10 +76,10 @@ const cuetIpuPackages = [
       "Counselling Calendar: Timely alerts and reminders for every step",
       "End-to-end support till admission is done",
     ],
-    popular: true,
+    popular: false,
     color: "bg-gradient-to-br from-orange-50 to-orange-100",
   }
 ];
 
 
-export const othersData = [...defaultData];
+export const othersData = [...cuetIpuPackages];
