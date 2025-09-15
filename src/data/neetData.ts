@@ -20,19 +20,19 @@ const defaultData = [
     {
         title: "Career Connect Services 999 Package",
         subtitle: "All In One Package",
-        price: 999,
+        originalPrice: 999,
+        discountPercent: 90,
+        price: 99,
         currency: "INR",
         url: "https://rzp.io/rzp/allinonecounsellingbundlemed",
         features: [
+            "One Time Call Support",
+            "Unlimited Chat Support With Experts",
             "Coverage: All India Quota, State Quota, All India Private & Deemed Counselling",
-            "College & Course Prediction PDF via WhatsApp/Mail (Hand-made by expert with 10+ yrs experience)",
-            "Choice Filling Order: Optimized order according to your rank",
-            "Round-wise Admission Chances: Including Mop-up & Stray rounds",
             "Instant Notifications via WhatsApp/Mail till last round",
             "Counselling Calendar: Important dates tracking",
-            "Counselling Covered: MCC, AYUSH AACCC, Your State, Open State Private/Deemed, IPU BTech, MHT-CET Pharma/Tech, IISER IAT and more",
-            "No Call Support",
-            "No Chat Support",
+            "Counselling Covered: MCC, AYUSH AACCC, Your State, Open State Private/Deemed",
+
         ],
         popular: false,
         color: "bg-gradient-to-br from-blue-50 to-blue-100",
@@ -40,7 +40,9 @@ const defaultData = [
     {
         title: "Career Connect Services 4999 Package",
         subtitle: "Single Counselling Full Support",
-        price: 4999,
+        originalPrice: 4999,
+        discountPercent: 90,
+        price: 499,
         currency: "INR",
         url: "https://rzp.io/rzp/allinonecounsellingsingle",
         features: [
@@ -61,7 +63,9 @@ const defaultData = [
     {
         title: "Career Connect Services 9999 Package",
         subtitle: "All In One Package Complete Support",
-        price: 9999,
+        originalPrice: 9999,
+        discountPercent: 90,
+        price: 999,
         currency: "INR",
         url: "https://pages.razorpay.com/allinonecounsellingsupport",
         features: [

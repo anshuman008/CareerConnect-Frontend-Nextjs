@@ -10,6 +10,8 @@ interface Plan {
   title: string;
   subtitle: string;
   price?: number;
+  originalPrice?: number;
+  discountPercent?: number;
   currency: string;
   url: string;
   features?: string[];
@@ -72,6 +74,13 @@ const PlanCard = ({ plan }: { plan: Plan }) => (
       plan.color
     )}
   >
+    {typeof plan.discountPercent === "number" && plan.discountPercent > 0 && (
+      <div className="absolute -left-10 top-4 rotate-[-56deg] z-30">
+        <span className="inline-block bg-red-500 text-white text-[10px] sm:text-xs font-extrabold tracking-widest px-8 py-1 shadow-lg rounded">
+          {plan.discountPercent}% OFF
+        </span>
+      </div>
+    )}
     {plan.category && (
       <div className="absolute left-1/2 -translate-x-1/2 top-2 z-30 flex justify-center w-full">
         <span className="inline-block px-5 py-1 rounded-full bg-gradient-to-r from-blue-500 to-green-500 text-white text-xs font-bold shadow-lg border-2 border-white uppercase tracking-wide">
@@ -101,8 +110,29 @@ const PlanCard = ({ plan }: { plan: Plan }) => (
       </div>
       {typeof plan.price === "number" && (
         <div className="mb-4">
-          <div className="flex items-baseline">
-            <span className={classNames("text-2xl sm:text-3xl font-extrabold", plan.popular ? "text-orange-600" : "text-gray-900")}>{plan.currency === "INR" ? "\u20b9" : plan.currency}{plan.price}</span>
+          <div className="flex items-baseline space-x-2">
+            {typeof plan.originalPrice === "number" && plan.originalPrice > plan.price ? (
+              <>
+                <span className="text-sm sm:text-base text-gray-400 line-through">
+                  {plan.currency === "INR" ? "\u20b9" : plan.currency}
+                  {plan.originalPrice}
+                </span>
+                <span className={classNames("text-2xl sm:text-3xl font-extrabold", plan.popular ? "text-orange-600" : "text-gray-900")}>
+                  {plan.currency === "INR" ? "\u20b9" : plan.currency}
+                  {plan.price}
+                </span>
+                {typeof plan.discountPercent === "number" && plan.discountPercent > 0 && (
+                  <span className="ml-1 inline-flex items-center text-xs font-bold text-red-600 bg-red-50 px-2 py-0.5 rounded">
+                    {plan.discountPercent}% OFF
+                  </span>
+                )}
+              </>
+            ) : (
+              <span className={classNames("text-2xl sm:text-3xl font-extrabold", plan.popular ? "text-orange-600" : "text-gray-900")}>
+                {plan.currency === "INR" ? "\u20b9" : plan.currency}
+                {plan.price}
+              </span>
+            )}
           </div>
         </div>
       )}
@@ -147,8 +177,8 @@ const PlanCard = ({ plan }: { plan: Plan }) => (
 );
 
 const TABS: { name: string; data: Plan[] }[] = [
-  { name: "Engineering", data: plansData },
   { name: "Medical", data: neetData },
+  { name: "Engineering", data: plansData },
   { name: "Others", data: othersData },
 ];
 
