@@ -47,10 +47,8 @@ const defaultData = [
         url: "https://rzp.io/rzp/allinonecounsellingsingle",
         features: [
             "Full support for any one counselling (All India or State or Private)",
-            "Unlimited Call Support",
-            "Unlimited Chat Support",
+            "Unlimited Call/Chat Support with Experts",
             "Coverage: All India Quota, State Quota, All India Private & Deemed Counselling",
-            "College & Course Prediction PDF via WhatsApp/Mail (Expert crafted)",
             "Choice Filling Order: Based on your rank and profile",
             "Round-wise Admission Chances: Including Mop-up/Stray rounds",
             "Instant Notifications: WhatsApp/Mail updates for every round",
