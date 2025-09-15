@@ -70,8 +70,7 @@ const defaultData = [
         url: "https://pages.razorpay.com/allinonecounsellingsupport",
         features: [
             "Coverage: All India Quota, State Quota, All India Private & Deemed Counselling",
-            "Unlimited Call Support with Experts",
-            "Unlimited Chat Support",
+            "Unlimited Call/Chat Support with Experts",
             "College & Course Prediction PDF via WhatsApp/Mail (Expert with 10+ yrs experience)",
             "Choice Filling Order: Tailored to your rank",
             "Round-wise Admission Chances: Complete round prediction including Mop-up/Stray",
