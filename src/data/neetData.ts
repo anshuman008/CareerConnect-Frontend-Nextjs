@@ -73,7 +73,7 @@ const defaultData = [
             "Round-wise Admission Chances: Complete round prediction including Mop-up/Stray",
             "Instant Notifications via WhatsApp/Mail till last round",
             "Counselling Calendar: Timely alerts and date tracking",
-            "Counselling Covered: MCC, AYUSH AACCC, Your State, Open State Private/Deemed, IPU BTech, MHT-CET Pharma/Tech, IISER IAT and more",
+            "Counselling Covered: MCC, AYUSH AACCC, Your State, Open State Private/Deemed",
         ],
         popular: true,
         color: "bg-gradient-to-br from-orange-50 to-orange-100",
