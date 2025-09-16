@@ -68,7 +68,6 @@ const defaultData = [
         features: [
             "Coverage: All India Quota, State Quota, All India Private & Deemed Counselling",
             "Unlimited Call/Chat Support with Experts",
-            "College & Course Prediction PDF via WhatsApp/Mail (Expert with 10+ yrs experience)",
             "Choice Filling Order: Tailored to your rank",
             "Round-wise Admission Chances: Complete round prediction including Mop-up/Stray",
             "Instant Notifications via WhatsApp/Mail till last round",
