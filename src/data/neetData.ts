@@ -1,20 +1,3 @@
-import { posters } from "@/images/posters/posters";
-
-
-
-// const newData = posters.map((poster) => {
-//   return {
-//     title: poster.name,
-//     subtitle: poster.subtitle,
-//     price: poster.price,
-//     currency: "INR",
-//     url: "https://razorpay.me/@jaykishan3957",
-//     poster: poster.image.src,
-//     popular: false,
-//     color: "bg-gradient-to-br from-blue-50 to-blue-100",
-//   }
-// })
-
 
 const defaultData = [
     {
