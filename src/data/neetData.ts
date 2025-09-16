@@ -69,7 +69,6 @@ const defaultData = [
             "Coverage: All India Quota, State Quota, All India Private & Deemed Counselling",
             "Unlimited Call/Chat Support with Experts",
             "Choice Filling Order: Tailored to your rank",
-            "Round-wise Admission Chances: Complete round prediction including Mop-up/Stray",
             "Instant Notifications via WhatsApp/Mail till last round",
             "Counselling Calendar: Timely alerts and date tracking",
             "Counselling Covered: MCC, AYUSH AACCC, Your State, Open State Private/Deemed",
