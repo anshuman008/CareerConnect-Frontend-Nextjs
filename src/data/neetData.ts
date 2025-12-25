@@ -1,13 +1,13 @@
 
 const defaultData = [
     {
-        title: "Career Connect Services 999 Package",
-        subtitle: "All In One Package",
+        title: "All In One Medical Package",
+        subtitle: "Career Connect Services 799 Package",
         originalPrice: 999,
-        discountPercent: 90,
-        price: 99,
+        discountPercent: 20,
+        price: 799,
         currency: "INR",
-        url: "https://rzp.io/rzp/allinonecounsellingbundlemed",
+        url: "https://rzp.io/rzp/allinonemedcounsellingbundle",
         features: [
             "One Time Call Support",
             "Unlimited Chat Support With Experts",
@@ -21,13 +21,13 @@ const defaultData = [
         color: "bg-gradient-to-br from-blue-50 to-blue-100",
     },
     {
-        title: "Career Connect Services 4999 Package",
-        subtitle: "Single Counselling Full Support",
-        originalPrice: 4999,
-        discountPercent: 90,
-        price: 499,
+        title: "All In One Call Medical (Offline+Online) Package",
+        subtitle: "Career Connect Services 1999 Offline + Online",
+        originalPrice: 2499,
+        discountPercent: 20,
+        price: 1999,
         currency: "INR",
-        url: "https://rzp.io/rzp/allinonecounsellingsingle",
+        url: "https://rzp.io/rzp/allinonemedicaloffline",
         features: [
             "Full support for any one counselling (All India or State or Private)",
             "Unlimited Call/Chat Support with Experts",
@@ -43,11 +43,11 @@ const defaultData = [
     {
         title: "Career Connect Services 9999 Package",
         subtitle: "All In One Package Complete Support",
-        originalPrice: 9999,
-        discountPercent: 90,
-        price: 999,
+        originalPrice: 19999,
+        discountPercent: 50,
+        price: 9999,
         currency: "INR",
-        url: "https://pages.razorpay.com/allinonecounsellingsupport",
+        url: "https://rzp.io/rzp/allinoneothersupport",
         features: [
             "Coverage: All India Quota, State Quota, All India Private & Deemed Counselling",
             "Unlimited Call/Chat Support with Experts",
